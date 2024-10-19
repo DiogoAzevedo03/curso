@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verificar se é do pais </title>
+    <style>
+        body {
+            background-color: rgb(70, 142, 236);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>sistema de verificaçao de pais </h1>
+    pais: <input type="string" name="txtvel" id="txtvel">
+    <input type="button" value="verificar" onclick="calcular()">
+    
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            var pais = String(txtv.value)
+            res.innerHTML = `<p>o seu pais é <strong>${pais}</strong></p>`
+            
+            if (pais == 'brasil') {
+                res.innerHTML += `<p>voce é <strong>BRASILEIRO</strong></p>`
+            }else {
+                res.innerHTML += `<p>voce não é <strong>BRASILEIRO</strong></p>`
+            }
+        }
+    </script>
+    
+</body>
+</html>
